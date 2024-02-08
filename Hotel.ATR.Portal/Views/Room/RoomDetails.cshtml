@@ -293,7 +293,6 @@
     </div>
 </section>
 <!-- Room Details Area End -->
-<!-- Client Area Start -->
 <div class="client-area">
     <div class="container">
         <div class="row">
@@ -342,6 +341,7 @@
         </div>
     </div>
 </div>
+<!-- Client Area Start -->
 <!-- Client Area End -->
 <!-- Newsletter Area Start -->
 <section class="newsletter-area bg-light">
@@ -351,9 +351,12 @@
                 <div class="newsletter-container">
                     <h3>NewsLetter Sign-Up</h3>
                     <div class="newsletter-form">
-                        <form action="#" id="mc-form" class="mc-form fix">
-                            <input id="mc-email" type="email" name="email" placeholder="Enter your E-mail">
-                            <button id="mc-submit" type="submit" class="default-btn">subcribes</button>
+                        <form action="@Url.Action("CreateSubscribe","Room")" 
+                         method="post">
+                            <input id="mc-email" type="text" name="email"
+                            placeholder="Enter your E-mail">
+
+                            <button type="submit" class="default-btn">subcribes</button>
                         </form>
                         <!-- mailchimp-alerts Start -->
                         <div class="mailchimp-alerts">

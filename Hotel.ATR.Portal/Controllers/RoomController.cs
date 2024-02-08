@@ -11,9 +11,15 @@ namespace Hotel.ATR.Portal.Controllers
         public IActionResult RoomList() {
             return View();
         }
-        public IActionResult RoomDetail()
+        public IActionResult RoomDetails()
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult CreateSubscribe(string email)
+        {
+            return RedirectToAction("RoomDetails");
+        }
+
     }
 }
